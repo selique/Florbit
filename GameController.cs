@@ -20,13 +20,34 @@ public class FormaFrase : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) 
 	{
-		if (other.gameObject.CompareTag ("Vazio")) {
+
+	var gos : GameObject[];
+        gos = GameObject.FindGameObjectsWithTag("vaca"); 
+  
+        if (gos.length == 0) {
+            Debug.Log("O objeto nao contem a palavra procurada");
+        }
+        
+       	for (int i = 0; i < textPalavra.Length; i++) {
+	 	numLetras++;
+	 	if(gameObject.tag = Left(textPalavra, i)) {
+	 		displayLetter == true;
+	 	} else if {
+	 		displayLetter == false;
+	 		contTentativas++;
+	 	}
+	}
+
+		if (other.gameObject.CompareTag (Tag_letra_A)) {
 			//other.gameObject.SetActive (false);
 			Destroy(other.gameObject);
 			textLetra.text = textLetra.text + "";//caso pegue o cubo vazio zera o conteudo
 		} else if {
 			contTentativas ++;
 		}
+		
+		
+		
 		
 		//verifica se a Tag contem a palavra cube
 		if (other.gameObject.tag.ToString ().Contains ("Cube") == true) {
