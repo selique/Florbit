@@ -5,7 +5,28 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Image))]
 public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    void IBeginDragHandler.OnBeginDrag(PointerEventData pointerEventData)
+ public Text palavra;
+ 
+ palavra = Text.palavra("BOLA");
+ 
+
+    void Start(){
+        public string[] Posicaopalavra;
+        Posicaopalavra = new string[4] ; 
+        Posicaopalavra[0] = "b";
+        Posicaopalavra[1] = "o";
+        Posicaopalavra[2] = "l";
+        Posicaopalavra[3] = "a";
+ for (int Posicaopalavra = 0; Posicaopalavra < 5; Posicaopalavra++)
+ {
+     
+   inteiros[Posicaopalavra] = Posicaopalavra;
+ }
+ 
+}
+
+
+  void IBeginDragHandler.OnBeginDrag(PointerEventData pointerEventData)
     {
         Debug.Log("start DragObject OnBeginDrag");
     }
